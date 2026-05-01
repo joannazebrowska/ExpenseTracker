@@ -7,16 +7,24 @@
       "RelativeMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|solutionrelative:smartspend\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|c:\\users\\zebro\\source\\repos\\smartspend\\smartspend\\dtos\\expenseinputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|solutionrelative:smartspend\\dtos\\expenseinputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|c:\\users\\zebro\\source\\repos\\smartspend\\smartspend\\dtos\\expenseoutputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|solutionrelative:smartspend\\dtos\\expenseoutputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|c:\\users\\zebro\\source\\repos\\smartspend\\smartspend\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|solutionrelative:smartspend\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|c:\\users\\zebro\\source\\repos\\smartspend\\smartspend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|solutionrelative:smartspend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|c:\\users\\zebro\\source\\repos\\smartspend\\smartspend\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|solutionrelative:smartspend\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|c:\\users\\zebro\\source\\repos\\smartspend\\smartspend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|solutionrelative:smartspend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|c:\\users\\zebro\\source\\repos\\smartspend\\smartspend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,12 +35,8 @@
       "RelativeMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|solutionrelative:smartspend\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|c:\\users\\zebro\\source\\repos\\smartspend\\smartspend\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|solutionrelative:smartspend\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|c:\\users\\zebro\\source\\repos\\smartspend\\smartspend\\dtos\\expenseinputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|solutionrelative:smartspend\\dtos\\expenseinputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|c:\\users\\zebro\\source\\repos\\smartspend\\smartspend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|solutionrelative:smartspend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1CB83C58-C5AD-5305-40F0-0FBBB0910B5D}|SmartSpend\\SmartSpend.csproj|c:\\users\\zebro\\source\\repos\\smartspend\\smartspend\\migrations\\20260426120502_adding user to expense realtionship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,12 +65,12 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 382,
+          "DockedWidth": 371,
           "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "AppDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Migrations\\AppDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "SmartSpend\\Migrations\\AppDbContextModelSnapshot.cs",
@@ -74,12 +78,11 @@
               "RelativeToolTip": "SmartSpend\\Migrations\\AppDbContextModelSnapshot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T08:46:39.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-29T08:46:39.676Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "SmartSpend.http",
               "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\SmartSpend.http",
               "RelativeDocumentMoniker": "SmartSpend\\SmartSpend.http",
@@ -95,29 +98,16 @@
               "Title": "ExpensesController.cs",
               "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Controllers\\ExpensesController.cs",
               "RelativeDocumentMoniker": "SmartSpend\\Controllers\\ExpensesController.cs",
-              "ToolTip": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Controllers\\ExpensesController.cs*",
-              "RelativeToolTip": "SmartSpend\\Controllers\\ExpensesController.cs*",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCsAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Controllers\\ExpensesController.cs",
+              "RelativeToolTip": "SmartSpend\\Controllers\\ExpensesController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAswDcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-26T17:51:49.009Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ExpenseInputDto.cs",
-              "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Dtos\\ExpenseInputDto.cs",
-              "RelativeDocumentMoniker": "SmartSpend\\Dtos\\ExpenseInputDto.cs",
-              "ToolTip": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Dtos\\ExpenseInputDto.cs",
-              "RelativeToolTip": "SmartSpend\\Dtos\\ExpenseInputDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-26T12:33:52.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "20260426120502_Adding user to expense realtionship.cs",
               "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Migrations\\20260426120502_Adding user to expense realtionship.cs",
               "RelativeDocumentMoniker": "SmartSpend\\Migrations\\20260426120502_Adding user to expense realtionship.cs",
@@ -129,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "20260425210653_initialmigration.cs",
               "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Migrations\\20260425210653_initialmigration.cs",
               "RelativeDocumentMoniker": "SmartSpend\\Migrations\\20260425210653_initialmigration.cs",
@@ -140,20 +130,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Expense.cs",
               "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Models\\Expense.cs",
               "RelativeDocumentMoniker": "SmartSpend\\Models\\Expense.cs",
               "ToolTip": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Models\\Expense.cs",
               "RelativeToolTip": "SmartSpend\\Models\\Expense.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAwwA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA9wA8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-25T20:55:09.815Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "20260425204856_added a user.cs",
               "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Migrations\\20260425204856_added a user.cs",
               "RelativeDocumentMoniker": "SmartSpend\\Migrations\\20260425204856_added a user.cs",
@@ -164,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\appsettings.json",
               "RelativeDocumentMoniker": "SmartSpend\\appsettings.json",
@@ -172,12 +162,11 @@
               "RelativeToolTip": "SmartSpend\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-25T20:44:07.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T20:44:07.543Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "SmartSpend\\Properties\\launchSettings.json",
@@ -189,20 +178,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Models\\AppDbContext.cs",
               "RelativeDocumentMoniker": "SmartSpend\\Models\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Models\\AppDbContext.cs",
               "RelativeToolTip": "SmartSpend\\Models\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T20:21:37.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T20:21:37.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Models\\User.cs",
               "RelativeDocumentMoniker": "SmartSpend\\Models\\User.cs",
@@ -210,12 +198,11 @@
               "RelativeToolTip": "SmartSpend\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T19:57:53.258Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T19:57:53.258Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Program.cs",
               "RelativeDocumentMoniker": "SmartSpend\\Program.cs",
@@ -223,7 +210,38 @@
               "RelativeToolTip": "SmartSpend\\Program.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T22:02:19.212Z",
+              "WhenOpened": "2026-03-27T22:02:19.212Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 393,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExpenseInputDto.cs",
+              "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Dtos\\ExpenseInputDto.cs",
+              "RelativeDocumentMoniker": "SmartSpend\\Dtos\\ExpenseInputDto.cs",
+              "ToolTip": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Dtos\\ExpenseInputDto.cs",
+              "RelativeToolTip": "SmartSpend\\Dtos\\ExpenseInputDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwBUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T12:33:52.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExpenseOutputDto.cs",
+              "DocumentMoniker": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Dtos\\ExpenseOutputDto.cs",
+              "RelativeDocumentMoniker": "SmartSpend\\Dtos\\ExpenseOutputDto.cs",
+              "ToolTip": "C:\\Users\\zebro\\source\\repos\\SmartSpend\\SmartSpend\\Dtos\\ExpenseOutputDto.cs",
+              "RelativeToolTip": "SmartSpend\\Dtos\\ExpenseOutputDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-01T10:37:51.439Z",
               "EditorCaption": ""
             }
           ]

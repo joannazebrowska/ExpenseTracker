@@ -38,7 +38,9 @@ namespace SmartSpend.Controllers
                 .Where(x => x.UserId == userId)
                 .ToListAsync();
 
-            return Ok(data);
+            var result = data.Select(ExpenseOutputDto.FromModel);
+
+            return Ok(result);
         }
 
         [Authorize]
@@ -54,7 +56,14 @@ namespace SmartSpend.Controllers
                 .Where(x => x.UserId == userId)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
-            return data == null ? NotFound() : Ok(data);
+            if(data == null)
+            {
+                return NotFound();
+            }
+
+            var result = ExpenseOutputDto.FromModel(data);
+
+            return Ok(result);
         }
 
         [Authorize]
