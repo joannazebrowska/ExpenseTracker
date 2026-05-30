@@ -1,0 +1,12 @@
+﻿namespace SmartSpend.Models
+{
+    public class Category
+    {
+        public int Id { get; set; }
+        public string CategoryName { get; set; }
+
+        public string? UserId { get; set; }
+        public User? User { get; set; }
+
+    }
+}
