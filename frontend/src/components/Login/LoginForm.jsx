@@ -20,13 +20,18 @@ const LoginForm = ({ }) => {
             await AuthService.login(email, password)
             setEmail('');
             setPassword('');
+            expenses();
         } catch (error) {
             console.error('Logging error', error);
         }
     };
 
     let navigate = useNavigate();
-    const routeChange = () => {
+    const expenses = () => {
+        let path = '/expenses';
+        navigate(path);
+    }
+    const register = () => {
         let path = '/register';
         navigate(path);
     }
@@ -35,7 +40,7 @@ const LoginForm = ({ }) => {
 
     return (
         <div className="loginForm">
-            <Box maxWidth={370} maxHeight={1} mx="auto">
+            <Box maxWidth={370} mx="auto" mt={4}>
             <Paper elevation={2} sx={{ padding: 4 }}>
             <Typography variant="h6" textAlign="center" mb={3}>
                 Zaloguj się, aby kontynuuować
@@ -49,8 +54,9 @@ const LoginForm = ({ }) => {
                         id="email"
                         value={email}
                         color="secondary" 
-                        onChange={e => setEmail(e.target.value)} 
-                        required  
+                        onChange={e => setEmail(e.target.value)}
+                        required
+                          
                      />
                 </Stack>
                 <Stack mb={2}>
@@ -62,12 +68,13 @@ const LoginForm = ({ }) => {
                         value={password} 
                         color="secondary" 
                         onChange={e => setPassword(e.target.value)} 
-                        required  
+                        required
+                          
                     />
                 </Stack> 
                 <Stack direction="column" spacing={1}>
-                    <Button variant="outlined" color="secondary" type="submit"className="btn btn-primary">Zaloguj</Button>
-                    <Button variant="outlined" color="secondary" type="submit" onClick={routeChange}>
+                    <Button variant="outlined" color="secondary" type='submit'>Zaloguj</Button>
+                    <Button variant="outlined" color="secondary" type="button" onClick={register}>
                         Nie mam konta
                     </Button>
                 </Stack>

@@ -36,9 +36,10 @@ const ExpenseList = () => {
     const handleEdit = () => {
         fetchExpenses();
     };
+
     return (
         <div className="container">
-            <Box maxWidth={800} mx="auto">
+            <Box maxWidth={850} mx="auto">
             <h2 className="my-4">Lista Wydatków</h2>
             <TableContainer component={Paper}>
                 <Table>

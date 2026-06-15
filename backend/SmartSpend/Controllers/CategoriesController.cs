@@ -118,13 +118,22 @@ namespace SmartSpend.Controllers
             if (userId == null)
                 return Unauthorized();
 
-
             var category = await _context.Category
                 .Where(x => x.UserId == userId)
                 .FirstOrDefaultAsync(x => x.Id == id);
             if (category == null)
                 return NotFound();
 
+            var expenses = await _context.Expenses
+                .Where(x => x.UserId == userId && x.CategoryId == id)
+                .ToListAsync();
+
+            foreach (var expense in expenses)
+            {
+                expense.CategoryId = null;
+            }
+
+            await _context.SaveChangesAsync();
             _context.Category.Remove(category);
             await _context.SaveChangesAsync();
 

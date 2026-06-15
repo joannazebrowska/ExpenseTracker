@@ -37,7 +37,7 @@ const RegisterForm = ({ }) => {
 
         return (
             <div className="registerForm">
-                <Box maxWidth={370} maxHeight={1} mx="auto">
+                <Box maxWidth={370} mx="auto" mt={4}>
                     <Paper elevation={2} sx={{padding: 4}}>
                         <Typography variant='h6' textAlign={'center'} mb={3}>
                             Zarejestruj się

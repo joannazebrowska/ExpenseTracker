@@ -10,14 +10,19 @@ import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import { DateField } from '@mui/x-date-pickers';
+
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import dayjs from 'dayjs';
+import 'dayjs/locale/pl';
 
 const ExpenseForm = ({ onExpenseAdded }) => {
     const [name, setName] = useState('');
     const [amount, setAmount] = useState('');
     const [categories, setCategories] = useState([]);
     const [categoryId, setCategoryId] = useState('');
-    const [date, setDate] = useState('');
+    const [date, setDate] = useState(null);
 
     useEffect(() => {
         fetchCategories();
@@ -30,14 +35,17 @@ const ExpenseForm = ({ onExpenseAdded }) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const newExpense = { name, amount: parseFloat(amount), categoryId, date };
+
+        const formatedDate = date.format('YYYY-MM-DD');
+
+        const newExpense = { name, amount: parseFloat(amount), categoryId: parseInt(categoryId), date: formatedDate };
         try {
             await ExpenseService.addExpense(newExpense);
             onExpenseAdded();
             setName('');
             setAmount('');
             setCategoryId('');
-            setDate('');
+            setDate(null);
         } catch (error) {
             console.error('Error adding expense:', error);
         }
@@ -56,6 +64,7 @@ const ExpenseForm = ({ onExpenseAdded }) => {
                             value={name}
                             onChange={e => setName(e.target.value)}
                             fullWidth
+                            color='secondary'
                             required
                             margin="normal"
                         />
@@ -66,11 +75,12 @@ const ExpenseForm = ({ onExpenseAdded }) => {
                             value={amount}
                             onChange={e => setAmount(e.target.value)}
                             fullWidth
+                            color='secondary'
                             required
                             margin="normal"
                         />
 
-                        <FormControl fullWidth>
+                        <FormControl color='secondary' fullWidth>
                         <InputLabel>Kategoria</InputLabel>
                         <Select
                             labelId="category-label"
@@ -89,17 +99,23 @@ const ExpenseForm = ({ onExpenseAdded }) => {
                         </Select>
                         </FormControl>
 
-                        <TextField
+                        <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="pl">
+                        <DatePicker
                             label="Data"
-                            type="date"
-                            InputLabelProps={{ shrink: true }}
                             value={date}
-                            onChange={e => setDate(e.target.value)}
+                            onChange={(newVal) => setDate(newVal)}
                             fullWidth
                             required
                             margin="normal"
+                            slotProps={{
+                                textField: {
+                                    color: 'secondary',
+                                    // focused: true,
+                                }
+                            }}
                         />
-                        <Button variant="outlined" type="submit">Dodaj Wydatek</Button>
+                        </LocalizationProvider>
+                        <Button variant="outlined" color="secondary" type="submit">Dodaj</Button>
                     </Stack>
                 </form>
             </Box>

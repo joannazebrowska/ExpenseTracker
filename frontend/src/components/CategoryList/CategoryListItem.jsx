@@ -1,6 +1,22 @@
 import React, { useState } from 'react';
 import CategoryService from '../../services/CategoryService';
 
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import InputLabel from '@mui/material/InputLabel';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+
+import { IconButton, TextField } from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 const CategoryListItem = ({category, onDelete, onEdit }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [editedCategoryName, setEditedCategoryName] = useState(category.categoryName)
@@ -22,27 +38,31 @@ const CategoryListItem = ({category, onDelete, onEdit }) => {
         setEditedCategoryName(category.categoryName);
     };
     return (
-        <li className="list-group-expense">
+        <TableRow className="category-table">
             {isEditing ? (
-                <div className="row">
-                    <div className="col">
-                        <input type="text" className="form-control" value={editedCategoryName} onChange={e => setEditedCategoryName(e.target.value)} required />
-                    </div>
-                    <div className="col-auto">
-                        <button className="btn btn-success me-2" onClick={handleSave}>Zapisz</button>
-                        <button className="btn btn-secondary" onClick={handleCancel}>Anuluj</button>
-                    </div>
-                </div>
+                <>
+                    <TableCell className="col">
+                        <TextField type="text" id="outlined-basic" variant="outlined" color="secondary" value={editedCategoryName} onChange={e => setEditedCategoryName(e.target.value)} required />
+                    </TableCell>
+                    <TableCell>
+                        <Button size="small" variant="outlined" color="secondary" onClick={handleSave}>Zapisz</Button>
+                        <Button size="small" variant="outlined" color="secondary" onClick={handleCancel}>Anuluj</Button>
+                    </TableCell>
+                </>
             ) : (
-                <div className="d-flex justify-content-between align-items-center">
-                    <span>{category.categoryName}</span>
-                    <div>
-                        <button className="btn btn-danger me-2" onClick={onDelete}>Usuń</button>
-                        <button className="btn btn-primary" onClick={handleEdit}>Edytuj</button>
-                    </div>
-                </div>
+                <>
+                    <TableCell>{category.categoryName}</TableCell>
+                    <TableCell>
+                        <IconButton onClick={handleEdit}>
+                            <EditIcon />
+                        </IconButton>
+                        <IconButton onClick={onDelete}>
+                            <DeleteIcon />
+                        </IconButton>
+                    </TableCell>
+                </>
             )}
-        </li>
+        </TableRow>
     );
 };
 export default CategoryListItem;

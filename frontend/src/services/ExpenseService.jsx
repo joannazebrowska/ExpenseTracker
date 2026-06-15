@@ -2,6 +2,7 @@ import axios from 'axios';
 
 axios.defaults.withCredentials = true;
 const baseURL = "/api/expenses";
+const summaryURL = '/api/expenses/summary'
 const ExpenseService = {
     getAllExpenses: async () => {
         const response = await axios.get(baseURL);
@@ -18,6 +19,11 @@ const ExpenseService = {
     updateExpense: async (id, expense) => {
         const response = await axios.put(`${baseURL}/${id}`, expense);
         return response.data;
-    } 
+    },
+
+    getSummary: async () => {
+        const response = await axios.get(summaryURL);
+        return response.data;
+    }
 };
 export default ExpenseService;

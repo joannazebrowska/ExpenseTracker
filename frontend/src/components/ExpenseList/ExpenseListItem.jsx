@@ -13,24 +13,32 @@ import InputLabel from '@mui/material/InputLabel';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 
-import { IconButton } from '@mui/material';
+import { IconButton, TextField } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import dayjs from 'dayjs';
+import 'dayjs/locale/pl';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
 const ExpenseListItem = ({expense, onDelete, onEdit }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [editedName, setEditedName] = useState(expense.name)
     const [editedAmount, setEditedAmount] = useState(expense.amount)
-    const [editedDate, setEditedDate] = useState(expense.date)
-    const [editedCategoryId, setEditedCategoryId] = useState(expense.categoryId)
+    const [editedDate, setEditedDate] = useState(expense.date ? dayjs(expense.date) : null)
+    const [editedCategoryId, setEditedCategoryId] = useState(expense.categoryId ?? '')
     const [categories, setCategories] = useState([])
     const handleEdit = async () => {
         setIsEditing(true);
     };
     const handleSave = async () => {
-        const editedExpense = { ...expense, name: editedName, amount: parseFloat(editedAmount), date: editedDate, categoryId: editedCategoryId === "" ? null : parseInt(editedCategoryId)};
+        const formatedDate = editedDate.format('YYYY-MM-DD');
+
+        const editedExpense = { ...expense, name: editedName, amount: parseFloat(editedAmount), date: formatedDate, categoryId: editedCategoryId === "" ? null : parseInt(editedCategoryId)};
         try {
             await ExpenseService.updateExpense(expense.id, editedExpense);
             setIsEditing(false);
@@ -53,33 +61,34 @@ const ExpenseListItem = ({expense, onDelete, onEdit }) => {
         setIsEditing(false);
         setEditedName(expense.name);
         setEditedAmount(expense.amount);
-        setEditedDate(expense.date);
+        setEditedDate(dayjs(expense.date));
         setEditedCategoryId(expense.categoryId)
     };
     return (
+        <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="pl">
         <TableRow className="expense-table">
             {isEditing ? (
                 <>
                     <TableCell className="col">
-                        <input type="text" className="form-control" value={editedName} onChange={e => setEditedName(e.target.value)} required />
+                        <TextField id="outlined-basic" variant="outlined" color="secondary" type="text" className="form-control" value={editedName} onChange={e => setEditedName(e.target.value)} required />
                     </TableCell>
                     <TableCell className="col">
-                        <input type="number" className="form-control" value={editedAmount} onChange={e => setEditedAmount(e.target.value)} required />
+                        <TextField id="outlined-basic" variant="outlined" color="secondary" type="number" className="form-control" value={editedAmount} onChange={e => setEditedAmount(e.target.value)} required />
                     </TableCell>
                     <TableCell className="col">
-                        <input type="date" className="form-control" value={editedDate} onChange={e => setEditedDate(e.target.value)} required />
+                        <DatePicker slotProps={{textField:{color: 'secondary'}}} value={editedDate} onChange={(newDate) => setEditedDate(newDate)} required />
                     </TableCell>
                     <TableCell>
-                        <select className="form-control" value={editedCategoryId} onChange={e => setEditedCategoryId(e.target.value)} required>
-                            <option value="">brak</option>
+                        <Select labelId="category-label" color='secondary' id="category-select" value={editedCategoryId} onChange={e => setEditedCategoryId(e.target.value)} required>
+                            <MenuItem value="">brak</MenuItem>
                             {categories.map(c => (
-                                <option key={c.id} value={c.id}>{c.categoryName}</option>
+                                <MenuItem key={c.id} value={c.id}>{c.categoryName}</MenuItem>
                             ))}
-                        </select>
+                        </Select>
                     </TableCell>
                     <TableCell className="col-auto">
-                        <button className="btn btn-success me-2" onClick={handleSave}>Zapisz</button>
-                        <button className="btn btn-secondary" onClick={handleCancel}>Anuluj</button>
+                        <Button size="small" variant="outlined" color="secondary" onClick={handleSave}>Zapisz</Button>
+                        <Button size="small" variant="outlined" color="secondary" onClick={handleCancel}>Anuluj</Button>
                     </TableCell>
                 </>
             ) : (
@@ -95,11 +104,11 @@ const ExpenseListItem = ({expense, onDelete, onEdit }) => {
                         <IconButton onClick={onDelete}>
                             <DeleteIcon />
                         </IconButton>
-
                     </TableCell>
                 </>
             )}
         </TableRow>
+        </LocalizationProvider>
     );
 };
 export default ExpenseListItem;

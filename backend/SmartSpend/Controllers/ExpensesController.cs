@@ -137,5 +137,34 @@ namespace SmartSpend.Controllers
 
             return NoContent();
         }
+
+
+        [Authorize]
+        [HttpGet("summary")]
+        public async Task<IActionResult> GetSummary()
+        {
+            var userId = GetUserId();
+
+            if (userId == null)
+                return Unauthorized();
+
+            var expense = await _context.Expenses
+                .Include(x => x.Category)
+                .Where(x => x.UserId == userId)
+                .ToListAsync();
+
+            var groupedExpenses = expense.GroupBy(x => x.Category?.CategoryName ?? "Niepogrupowane");
+
+            var result = groupedExpenses.Select(g => new
+            {
+                CategoryName = g.Key,
+                Total = g.Sum(expense => expense.Amount)
+            });
+
+            return Ok(result);
+        }
+
+         
+
     }
 }

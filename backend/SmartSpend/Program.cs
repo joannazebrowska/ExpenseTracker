@@ -60,4 +60,10 @@ app.MapControllers();
 
 app.MapIdentityApi<User>();
 
+app.MapPost("/logout", async (SignInManager<User> signInManager) =>
+{
+    await signInManager.SignOutAsync();
+    return Results.Ok();
+}).RequireAuthorization();
+
 app.Run();
