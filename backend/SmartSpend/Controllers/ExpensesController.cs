@@ -139,6 +139,7 @@ namespace SmartSpend.Controllers
             return NoContent();
         }
 
+        // wczesna materializacja!przerobic
         [Authorize]
         [HttpGet("summary")]
         public async Task<IActionResult> GetSummary()
@@ -148,18 +149,15 @@ namespace SmartSpend.Controllers
             if (userId == null)
                 return Unauthorized();
 
-            var expense = await _context.Expenses
-                .Include(x => x.Category)
+            var result = await _context.Expenses
                 .Where(x => x.UserId == userId)
+                .GroupBy(x => x.Category != null ? x.Category.CategoryName : "Niepogrupowane")
+                .Select(g => new
+                {
+                    CategoryName = g.Key,
+                    Total = g.Sum(expense => expense.Amount)
+                })
                 .ToListAsync();
-
-            var groupedExpenses = expense.GroupBy(x => x.Category?.CategoryName ?? "Niepogrupowane");
-
-            var result = groupedExpenses.Select(g => new
-            {
-                CategoryName = g.Key,
-                Total = g.Sum(expense => expense.Amount)
-            });
 
             return Ok(result);
         }
@@ -172,18 +170,16 @@ namespace SmartSpend.Controllers
 
             if (userId == null) return Unauthorized();
 
-            var expense = await _context.Expenses
+            var result = await _context.Expenses
                 .Where(x => x.UserId == userId)
+                .GroupBy(x => new { x.Date.Year, x.Date.Month })
+                .Select(g => new
+                {
+                    g.Key.Year,
+                    g.Key.Month,
+                    Total = g.Sum(expense => expense.Amount)
+                })
                 .ToListAsync();
-
-            var groupedExpenses = expense.GroupBy(x => new { x.Date.Year, x.Date.Month });
-
-            var result = groupedExpenses.Select(g => new
-            {
-                g.Key.Year,
-                g.Key.Month,
-                Total = g.Sum(expense => expense.Amount)
-            });
 
             return Ok(result);
         }
