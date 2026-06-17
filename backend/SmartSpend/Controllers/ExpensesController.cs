@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using SmartSpend.Dtos;
 using SmartSpend.Models;
 using System.Security.Claims;
@@ -138,7 +139,6 @@ namespace SmartSpend.Controllers
             return NoContent();
         }
 
-
         [Authorize]
         [HttpGet("summary")]
         public async Task<IActionResult> GetSummary()
@@ -164,7 +164,30 @@ namespace SmartSpend.Controllers
             return Ok(result);
         }
 
-         
+        [Authorize]
+        [HttpGet("monthlydata")]
+        public async Task<IActionResult> GetMonthly()
+        {
+            var userId = GetUserId();
+
+            if (userId == null) return Unauthorized();
+
+            var expense = await _context.Expenses
+                .Where(x => x.UserId == userId)
+                .ToListAsync();
+
+            var groupedExpenses = expense.GroupBy(x => new { x.Date.Year, x.Date.Month });
+
+            var result = groupedExpenses.Select(g => new
+            {
+                g.Key.Year,
+                g.Key.Month,
+                Total = g.Sum(expense => expense.Amount)
+            });
+
+            return Ok(result);
+        }
+
 
     }
 }
