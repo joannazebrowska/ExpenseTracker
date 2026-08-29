@@ -12,6 +12,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import NavBar from './components/NavBar/NavBar';
 import ExpenseChart from './components/Reports/ExpenseChart';
+import MonthlyChart from './components/Reports/monthlyChart';
 
 const theme = createTheme({
     palette: {
@@ -49,7 +50,12 @@ function App() {
                         <CategoryList key={refreshCategories} />
                     </Box>
                     } />
-                <Route path="/reports" element={<ExpenseChart />} />
+                <Route path="/reports" element={
+                    <Box>
+                        <ExpenseChart />
+                        <MonthlyChart />
+                    </Box>
+                } />
             </Routes>
         </BrowserRouter>
         </ThemeProvider>

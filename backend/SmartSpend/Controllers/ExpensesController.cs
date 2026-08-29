@@ -173,6 +173,8 @@ namespace SmartSpend.Controllers
             var result = await _context.Expenses
                 .Where(x => x.UserId == userId)
                 .GroupBy(x => new { x.Date.Year, x.Date.Month })
+                .OrderBy(g => g.Key.Year)
+                .ThenBy(g => g.Key.Month)
                 .Select(g => new
                 {
                     g.Key.Year,

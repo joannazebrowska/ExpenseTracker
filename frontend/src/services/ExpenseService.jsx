@@ -3,6 +3,8 @@ import axios from 'axios';
 axios.defaults.withCredentials = true;
 const baseURL = "/api/expenses";
 const summaryURL = '/api/expenses/summary'
+const monthlyDataURL = '/api/expenses/monthlydata'
+
 const ExpenseService = {
     getAllExpenses: async () => {
         const response = await axios.get(baseURL);
@@ -23,6 +25,11 @@ const ExpenseService = {
 
     getSummary: async () => {
         const response = await axios.get(summaryURL);
+        return response.data;
+    },
+
+    getMonthlyData: async () => {
+        const response = await axios.get(monthlyDataURL);
         return response.data;
     }
 };
