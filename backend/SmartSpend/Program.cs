@@ -3,6 +3,10 @@ using Scalar.AspNetCore;
 using SmartSpend.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using SmartSpend.Services;
+
+using Microsoft.Extensions.AI;
+using OllamaSharp;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,6 +40,9 @@ x.UseNpgsql(builder.Configuration.GetConnectionString("MyConn")));
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+builder.Services.AddChatClient(
+    new OllamaApiClient(new Uri("http://localhost:11434"), "qwen2.5vl:7b"));
+builder.Services.AddScoped<ReceiptsService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -5,6 +5,8 @@ const baseURL = "/api/expenses";
 const summaryURL = '/api/expenses/summary'
 const monthlyDataURL = '/api/expenses/monthlydata'
 
+const budgetProgressURL = '/api/budgetlimit/budgetprogress'
+
 const ExpenseService = {
     getAllExpenses: async () => {
         const response = await axios.get(baseURL);
@@ -30,6 +32,18 @@ const ExpenseService = {
 
     getMonthlyData: async () => {
         const response = await axios.get(monthlyDataURL);
+        return response.data;
+    },
+
+    // getBudgetProgress: async (month, year) => { 
+    //     const response = await axios.get(`${budgetProgressURL}?month=${month}&year=${year}`);
+    //     return response.data;
+    // }
+
+    getBudgetProgress: async (month, year) => { 
+        const response = await axios.get(budgetProgressURL, {
+            params: { month, year }
+        });
         return response.data;
     }
 };

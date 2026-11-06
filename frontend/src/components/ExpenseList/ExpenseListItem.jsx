@@ -29,7 +29,7 @@ const ExpenseListItem = ({expense, onDelete, onEdit }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [editedName, setEditedName] = useState(expense.name)
     const [editedAmount, setEditedAmount] = useState(expense.amount)
-    const [editedDate, setEditedDate] = useState(expense.date ? dayjs(expense.date) : null)
+    const [editedDate, setEditedDate] = useState(dayjs(expense.date))
     const [editedCategoryId, setEditedCategoryId] = useState(expense.categoryId ?? '')
     const [categories, setCategories] = useState([])
     const handleEdit = async () => {

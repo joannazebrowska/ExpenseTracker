@@ -79,11 +79,11 @@ namespace SmartSpend.Controllers
             if (id == null)
                 return Unauthorized();
 
-            var model = expense.ToModel();
+            var newExpense = expense.ToModel();
 
-            model.UserId = id;
+            newExpense.UserId = id;
 
-            var createdEntity = _context.Expenses.Add(model);
+            var createdEntity = _context.Expenses.Add(newExpense);
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(Get), createdEntity.Entity); 
         }

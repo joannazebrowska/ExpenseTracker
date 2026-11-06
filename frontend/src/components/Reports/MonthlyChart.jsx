@@ -14,9 +14,9 @@ import { BarChart } from '@mui/x-charts/BarChart';
 const MonthlyChart  = () => {
     const [monthlyData, setMonthlyData] = useState([]);
     useEffect(() => {
-        fetchSummary();
+        fetchMonthlyData();
     }, []);
-    const fetchSummary = async () => {
+    const fetchMonthlyData = async () => {
         try {
             const monthlyData = await ExpenseService.getMonthlyData();
             setMonthlyData(monthlyData);
@@ -24,7 +24,6 @@ const MonthlyChart  = () => {
             console.error(error);
         }
     };    
-    console.log('monthlyData:', monthlyData);
         
     const chartData = monthlyData.map((item) => {
     const date = dayjs({ year: item.year, month: item.month - 1 });
@@ -35,7 +34,7 @@ const MonthlyChart  = () => {
     });
 
     const labels = chartData.map((item) => item.label);
-    const totals = chartData.map((item) => item.total)
+    const totals = chartData.map((item) => item.total);
 
     return (
         <Box maxWidth={600} maxHeight={100} mx="auto">

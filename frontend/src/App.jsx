@@ -13,6 +13,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import NavBar from './components/NavBar/NavBar';
 import ExpenseChart from './components/Reports/ExpenseChart';
 import MonthlyChart from './components/Reports/monthlyChart';
+import BudgetProgress from './components/Reports/BudgetProgress';
+import ReceiptScanner from './components/Receipts/ReceiptScanner';
 
 const theme = createTheme({
     palette: {
@@ -54,6 +56,12 @@ function App() {
                     <Box>
                         <ExpenseChart />
                         <MonthlyChart />
+                        <BudgetProgress />
+                    </Box>
+                } />
+                <Route path="/receipts" element= {
+                    <Box>
+                        <ReceiptScanner />
                     </Box>
                 } />
             </Routes>
